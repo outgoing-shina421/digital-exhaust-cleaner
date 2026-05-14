@@ -1,0 +1,21 @@
+# Local storage and cache
+.digital-exhaust-cleaner/
+reports/
+bin/
+tmp/
+temp/
+dist/
+build/
+
+# Logs and databases
+*.log
+*.db
+*.db-shm
+*.db-wal
+
+# Go binaries and coverage
+*.exe
+coverage.out
+coverage.html
+
+# Note: go.sum is intentionally tracked for dependency verification.

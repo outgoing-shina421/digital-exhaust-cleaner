@@ -1,0 +1,27 @@
+app:
+  data_dir: .digital-exhaust-cleaner
+  database_path: .digital-exhaust-cleaner/cleaner.db
+  quarantine_dir: .digital-exhaust-cleaner/quarantine
+scanner:
+  workers: 4
+  follow_symlinks: false
+  include_hidden: false
+  exclude:
+    - .git
+    - node_modules
+    - vendor
+similarity:
+  enabled: true
+  hamming_threshold: 8
+classifier:
+  enabled: true
+intelligence:
+  enabled: true
+  repeated_download_min: 3
+  abandoned_project_days: 90
+recommendation:
+  stale_after_days: 180
+  min_confidence: 0.55
+logging:
+  level: info
+  development: true
