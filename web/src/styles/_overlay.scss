@@ -1,0 +1,43 @@
+/**
+ * Scanning action and directory loading backdrop overlays and loading spinners.
+ */
+@use 'variables' as *;
+
+.scanning-overlay {
+	display: none;
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.48);
+	z-index: 100;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 18px;
+
+	&.active {
+		display: flex;
+	}
+
+	p {
+		color: #fff;
+		font-size: 15px;
+		font-weight: 600;
+		text-align: center;
+		padding: 0 24px;
+	}
+}
+
+.spinner {
+	width: 48px;
+	height: 48px;
+	border: 4px solid rgba(255, 255, 255, 0.2);
+	border-top-color: #fff;
+	border-radius: 50%;
+	animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+	to {
+		transform: rotate(360deg);
+	}
+}

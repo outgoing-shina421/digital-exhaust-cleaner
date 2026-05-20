@@ -1,0 +1,176 @@
+/**
+ * Content section layouts, table grids, scoring indicators, and responsive views.
+ */
+@use 'variables' as *;
+@use 'base';
+
+section {
+	@extend %card;
+	padding: 20px;
+	margin-bottom: 16px;
+}
+
+/**
+ * Color-coded score legend showing risk categories (high, medium, low).
+ */
+.score-legend {
+	font-size: 11px;
+	color: $muted;
+	font-weight: 400;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+
+	span {
+		display: inline-flex;
+		align-items: center;
+		gap: 4px;
+	}
+}
+
+.dot {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	display: inline-block;
+	flex-shrink: 0;
+
+	&--high {
+		background: $red;
+	}
+
+	&--medium {
+		background: $amber;
+	}
+
+	&--low {
+		background: $blue;
+	}
+}
+
+/**
+ * Responsive layout wrapping for wide tables.
+ */
+.table-wrap {
+	overflow-x: auto;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	min-width: 560px;
+}
+
+th,
+td {
+	padding: 10px;
+	border-top: 1px solid $line;
+	text-align: left;
+	vertical-align: top;
+}
+
+th {
+	color: $muted;
+	font-weight: 600;
+	font-size: 11px;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	white-space: nowrap;
+}
+
+/**
+ * Column width grids for standard layouts.
+ */
+col {
+	&.col-score {
+		width: 72px;
+	}
+
+	&.col-cat {
+		width: 160px;
+	}
+
+	&.col-expl {
+		width: 30%;
+	}
+
+	&.col-path {
+		width: auto;
+	}
+
+	&.col-action {
+		width: 108px;
+	}
+}
+
+/**
+ * Visual badges representing file analysis scores.
+ */
+.score {
+	display: inline-block;
+	min-width: 52px;
+	padding: 3px 9px;
+	border-radius: 999px;
+	color: #fff;
+	text-align: center;
+	font-weight: 700;
+	font-size: 13px;
+
+	&--high {
+		background: $red;
+	}
+
+	&--medium {
+		background: $amber;
+	}
+
+	&--low {
+		background: $blue;
+	}
+}
+
+/**
+ * Formatting for file categories, matching rules, and details.
+ */
+.category {
+	color: $teal;
+	font-weight: 700;
+}
+
+.rules {
+	color: $muted;
+	font-size: 11px;
+	margin-top: 2px;
+}
+
+.path-cell {
+	word-break: break-all;
+	font-size: 12px;
+	color: $muted;
+	max-width: 340px;
+}
+
+.action-cell {
+	white-space: nowrap;
+}
+
+/**
+ * Fallback banner shown when no items match criteria.
+ */
+.empty {
+	color: $muted;
+	padding: 10px 0 2px;
+	font-size: 13px;
+}
+
+/**
+ * Small-viewport grid overrides (collapsing structural path cells on mobile).
+ */
+@media (max-width: 760px) {
+
+	col.col-path,
+	th:nth-child(4),
+	td:nth-child(4) {
+		display: none;
+	}
+}

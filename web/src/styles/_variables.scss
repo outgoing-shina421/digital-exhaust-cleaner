@@ -1,0 +1,32 @@
+/**
+ * Design tokens and variables defining the application's visual system.
+ * Contains color palettes, border radii, typography configurations, and threshold values.
+ */
+$bg: #f0f2f7;
+$panel: #ffffff;
+$ink: #17202a;
+$muted: #687385;
+$line: #dfe5ee;
+
+$blue: #2456d6;
+$blue-light: #eef2fd;
+$teal: #087f7a;
+$red: #b42318;
+$amber: #9a6400;
+$green: #1a6b3a;
+
+$radius: 10px;
+$radius-sm: 6px;
+
+$font: "Segoe UI", system-ui, sans-serif;
+$font-size: 14px;
+$line-height: 1.6;
+
+/**
+ * Visual threshold color maps for item scores.
+ */
+$score-high-color: $red;
+$score-medium-color: $amber;
+$score-low-color: $blue;
+$score-high-min: 0.75;
+$score-medium-min: 0.50;

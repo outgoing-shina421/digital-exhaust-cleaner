@@ -145,6 +145,23 @@ func IsHiddenName(name string) bool {
 	return strings.HasPrefix(name, ".") && name != "." && name != ".."
 }
 
+// IsSystemName detects common OS-level system files and directories across platforms.
+func IsSystemName(name string) bool {
+	lower := strings.ToLower(name)
+	switch lower {
+	// Windows system files and directories
+	case "$recycle.bin", "system volume information", "pagefile.sys", "hiberfil.sys", "swapfile.sys", "thumbs.db", "desktop.ini", "$mft", "ntuser.dat", "bootmgr", "bootnxt":
+		return true
+	// macOS system files and directories
+	case ".ds_store", ".trashes", ".spotlight-v100", ".fseventsd", ".documentrevisions-v100", ".vol":
+		return true
+	// Linux common system artifacts that shouldn't be scanned
+	case "lost+found":
+		return true
+	}
+	return false
+}
+
 func detectMIME(path string, extension string) string {
 	if byExtension := mime.TypeByExtension(extension); byExtension != "" {
 		return byExtension

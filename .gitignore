@@ -19,3 +19,6 @@ coverage.out
 coverage.html
 
 # Note: go.sum is intentionally tracked for dependency verification.
+
+# Frontend – do not commit node_modules; DO commit compiled assets in internal/ui/static/
+web/node_modules/

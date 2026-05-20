@@ -1,0 +1,52 @@
+/**
+ * Base reset rules, body layouts, and global typography foundations.
+ */
+@use 'variables' as *;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: $bg;
+	color: $ink;
+	font: $font-size / #{$line-height} $font;
+	-webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2 {
+	letter-spacing: 0;
+}
+
+h1 {
+	font-size: 22px;
+	font-weight: 700;
+}
+
+h2 {
+	font-size: 15px;
+	font-weight: 700;
+	margin-bottom: 14px;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+main {
+	width: min(1240px, calc(100vw - 32px));
+	margin: 24px auto 56px;
+}
+
+/**
+ * Base card placeholder pattern for shared panel surfaces.
+ */
+%card {
+	background: $panel;
+	border: 1px solid $line;
+	border-radius: $radius;
+}

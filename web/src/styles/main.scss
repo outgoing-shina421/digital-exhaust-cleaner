@@ -1,0 +1,10 @@
+/**
+ * Primary stylesheet entry point that registers all system style partials.
+ */
+@use 'variables';
+@use 'base';
+@use 'header';
+@use 'buttons';
+@use 'metrics';
+@use 'table';
+@use 'overlay';

@@ -127,5 +127,8 @@ func runServe(ctx context.Context, args []string) error {
 		Root:          root,
 		QuarantineDir: cfg.App.QuarantineDir,
 		Result:        result,
+		ScanFunc: func(scanCtx context.Context, targetPath string) (analyzer.Result, error) {
+			return analyzer.New(cfg, logger).Analyze(scanCtx, targetPath)
+		},
 	})
 }

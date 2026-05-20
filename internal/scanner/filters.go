@@ -48,6 +48,9 @@ func (f Filters) Accept(path string, entry fs.DirEntry) (Decision, error) {
 	if _, ok := f.excludedNames[strings.ToLower(name)]; ok {
 		return Decision{Accepted: false, Reason: "excluded name"}, nil
 	}
+	if metadata.IsSystemName(name) {
+		return Decision{Accepted: false, Reason: "system file"}, nil
+	}
 	if !f.includeHidden && metadata.IsHiddenName(name) {
 		return Decision{Accepted: false, Reason: "hidden path"}, nil
 	}

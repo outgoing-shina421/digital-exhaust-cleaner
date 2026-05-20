@@ -1,0 +1,20 @@
+{
+  "name": "digital-exhaust-cleaner-ui",
+  "version": "1.0.0",
+  "description": "Frontend asset pipeline for Digital Exhaust Cleaner",
+  "private": true,
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev":   "webpack --mode development --watch"
+  },
+  "devDependencies": {
+    "css-loader": "^7.1.2",
+    "css-minimizer-webpack-plugin": "^7.0.0",
+    "mini-css-extract-plugin": "^2.9.1",
+    "sass": "^1.77.4",
+    "sass-loader": "^16.0.3",
+    "terser-webpack-plugin": "^5.3.10",
+    "webpack": "^5.92.0",
+    "webpack-cli": "^5.1.4"
+  }
+}

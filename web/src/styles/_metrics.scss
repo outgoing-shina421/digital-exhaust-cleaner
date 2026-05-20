@@ -1,0 +1,37 @@
+/**
+ * Grid-based dashboard summary metrics and statistics panels.
+ */
+@use 'variables' as *;
+@use 'base';
+
+.metrics {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 12px;
+	margin-bottom: 20px;
+
+	@media (max-width: 760px) {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+.metric {
+	@extend %card;
+	padding: 16px 18px;
+
+	span {
+		display: block;
+		font-size: 11px;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+		color: $muted;
+	}
+
+	strong {
+		display: block;
+		font-size: 26px;
+		font-weight: 700;
+		margin-top: 4px;
+	}
+}
